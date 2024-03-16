@@ -1,0 +1,12 @@
+Strategia jest to wzorzec projektowy pozwalający na implementację
+kilku różnych wersji algorytmu rozwiązującego dane zadanie.
+Opiera się on na zestawie podobnych klas, z których każda jest
+implementacją innej wersji algorytmu. Pozwala to na wymienne
+wykorzystanie algorytmów podczas działania programu.
+Natomiast interfejs definiuje nam metody ktora klasa musi zaimplementować.
+Wzorce projektowe stanowią abstrakcyjny opis
+zależności pomiędzy klasami, co w efekcie doprowadza do
+pewnej standaryzacji kodu i czyni go bardziej zrozumiałym,
+efektywniejszym i mniej zawodnym.
+Wadą jest natomiast wdrożenie sporego zestawu klas i interfejsów i skomplikowanie rozwiązania.
+Do obsługi prostego przypadku biznesowego konieczne jest napisanie rozbudowanej abstrakcji.
