@@ -1,4 +1,4 @@
-public class CarSpeed {
+public class CarSpeed implements ICarSpeed {
     private Car car;
 
     public CarSpeed(Car car) {

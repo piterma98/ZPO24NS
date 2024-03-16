@@ -1,4 +1,4 @@
-public class Pracownik {
+public class Pracownik implements IPracownik {
     Pracowac pracowac;
     Dojezdzac dojezdzac;
     SpedzenieWolnegoCzasu spedzenieWolnegoCzasu;
@@ -14,7 +14,13 @@ public class Pracownik {
     public Pracownik(String zawod) {
         this.zawod = zawod;
     }
-    public void methods(){
-        System.out.println("Metody");
+    public void pracuj(){
+        this.pracowac.pracuj();
+    }
+    public void dojezdzaj(){
+        this.dojezdzac.dojezdzaj();
+    }
+    public void spedzajCzasWolny(){
+        this.spedzenieWolnegoCzasu.spedzajWolnyCzas();
     }
 }

@@ -1,4 +1,4 @@
-public class Car {
+public class Car implements ICar{
     public String name;
     public int maxSpeed;
 
