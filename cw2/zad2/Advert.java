@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.Map;
 
 public class Advert implements IAdvert{
@@ -30,6 +29,6 @@ public class Advert implements IAdvert{
     public void send(Recipient recipient){
         this.choseNotificationChannel();
         String message = this.getTranslatedText(recipient.getLocale());
-        this.notificationChannel.send(message);
+        this.notificationChannel.send(message, recipient);
     }
 }

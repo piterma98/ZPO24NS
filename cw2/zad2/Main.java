@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Recipient janusz = new Recipient("Janusz", "pl");
-        Recipient mathew = new Recipient("Mathew", "en");
-        Recipient ferdek = new Recipient("Ferdek", "en");
+        Recipient janusz = new Recipient("Janusz", "janusz@poczta.pl", "500500500", "pl");
+        Recipient mathew = new Recipient("Mathew", "mathew@mail.com", "123456789", "en");
+        Recipient ferdek = new Recipient("Ferdek", "ferdek@poczta.pl", "654321789", "en");
 
         Advert ad_1 = new Advert(5.00, new HashMap<>() {{
             put("pl", "Jest dobrze");
