@@ -1,3 +1,3 @@
-interface TranslationStrategy {
+public interface TranslationStrategy {
     String translate(String text);
 }

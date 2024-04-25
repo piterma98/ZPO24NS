@@ -1,4 +1,4 @@
-class Translator {
+public class Translator {
     private TranslationStrategy strategy;
 
     public Translator(TranslationStrategy strategy) {
