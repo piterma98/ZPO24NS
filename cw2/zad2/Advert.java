@@ -1,18 +1,27 @@
 import java.util.Map;
+import java.util.Objects;
 
 public class Advert implements IAdvert{
     Double price;
     private INotificationChannel notificationChannel;
-    Map<String, String> localized_text_dict;
-
-    public Advert(Double price, Map<String, String> localized_text_dict) {
+    public Advert(Double price) {
         this.price = price;
-        this.localized_text_dict = localized_text_dict;
     }
 
-    @Override
-    public String getTranslatedText(String recipientLocale){
-        return this.localized_text_dict.get(recipientLocale);
+    private Translator getTranslator(String locale) {
+        if(Objects.equals(locale, "pl")){
+            return new Translator(new PLTranslationStrategy());
+        }
+        else if(Objects.equals(locale, "en")){
+            return new Translator(new ENTranslationStrategy());
+        }
+        else if(Objects.equals(locale, "de")){
+            return new Translator(new DETranslationStrategy());
+        }
+        else{
+            System.out.println("Not translation strategy found for this locale");
+            return null;
+        }
     }
     @Override
     public void choseNotificationChannel() {
@@ -28,7 +37,7 @@ public class Advert implements IAdvert{
     @Override
     public void send(Recipient recipient){
         this.choseNotificationChannel();
-        String message = this.getTranslatedText(recipient.getLocale());
-        this.notificationChannel.send(message, recipient);
+        Translator translator = this.getTranslator(recipient.getLocale());
+        this.notificationChannel.send(translator, recipient);
     }
 }

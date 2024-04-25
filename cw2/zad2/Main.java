@@ -8,20 +8,11 @@ public class Main {
 
         Recipient janusz = new Recipient("Janusz", "janusz@poczta.pl", "500500500", "pl");
         Recipient mathew = new Recipient("Mathew", "mathew@mail.com", "123456789", "en");
-        Recipient ferdek = new Recipient("Ferdek", "ferdek@poczta.pl", "654321789", "en");
+        Recipient ferdek = new Recipient("Ferdek", "ferdek@post.de", "654321789", "de");
 
-        Advert ad_1 = new Advert(5.00, new HashMap<>() {{
-            put("pl", "Jest dobrze");
-            put("en", "It is good");
-        }});
-        Advert ad_2 = new Advert(500.00, new HashMap<>() {{
-            put("pl", "Darmowy rowerek");
-            put("en", "Free bicycle");
-        }});
-        Advert ad_3 = new Advert(500.00, new HashMap<>() {{
-            put("pl", "Znizka na kebaba");
-            put("en", "Kebab discount");
-        }});
+        Advert ad_1 = new Advert(5.00);
+        Advert ad_2 = new Advert(500.00);
+        Advert ad_3 = new Advert(500.00);
         ArrayList<Advert> adverts = new ArrayList<>();
         adverts.add(ad_1);
         adverts.add(ad_2);
