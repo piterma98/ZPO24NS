@@ -10,8 +10,9 @@ public class Main {
         cart = new Milk(cart);
         cart = new PendriveLeash(cart);
         cart = new ShopMascot(cart);
-        cart = new ShippingPrice(cart);
         cart = new Discount(cart);
+        //We add shipping as last item
+        cart = new ShippingPrice(cart);
 
 
         System.out.println(cart.getDescription());
