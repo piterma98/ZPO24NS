@@ -1,5 +1,5 @@
-public class ShippingPrice extends CartDecorator{
-    public ShippingPrice(Item item) {
+public class Shipping extends CartDecorator{
+    public Shipping(Item item) {
         super(item);
     }
     @Override

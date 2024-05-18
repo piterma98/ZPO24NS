@@ -11,8 +11,7 @@ public class Main {
         cart = new PendriveLeash(cart);
         cart = new ShopMascot(cart);
         cart = new Discount(cart);
-        //We add shipping as last item
-        cart = new ShippingPrice(cart);
+        cart = cart.addShipping();
 
 
         System.out.println(cart.getDescription());

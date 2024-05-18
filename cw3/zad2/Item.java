@@ -8,4 +8,7 @@ public abstract class Item implements IItem {
     public double getPrice() {
         return 0.0f;
     }
+    public Item addShipping(){
+        return new Shipping(this);
+    }
 }

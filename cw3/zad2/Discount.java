@@ -4,7 +4,7 @@ public class Discount extends CartDecorator{
     }
     @Override
     public String getDescription() {
-        return super.getDescription() + ", discount";
+        return super.getDescription() + ", discount -10";
     }
     @Override
     public double getPrice() {
